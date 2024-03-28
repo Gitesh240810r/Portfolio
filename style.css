@@ -894,7 +894,7 @@ border: solid 5px #328DC8;
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("./assets/Site/Footer.png") center;
+  background: url("./assets/imgs/Site/Footer.png") center;
   background-size: cover;
   color: #fff;
   font-size: 14px;
