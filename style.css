@@ -274,8 +274,10 @@ h6 {
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 5vw;
   color: #3b434a;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-mobile a:hover,
