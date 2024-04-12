@@ -3,118 +3,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="">
 
-    <style>
+    <link rel="stylesheet" href="c-style.css">
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+<style>
 
-body{
-    font-family: Outfit;
-    background: linear-gradient(#EBE8FC,#DDD5F3);
-}
+</style>
 
-.contact-container{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.contact-left{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-}
-
-.contact-left-title h2{
-font-weight: 600;
-color: #6c63ff;
-font-size: 40px;
-margin-bottom: 5px;
-}
-
-.contact-left-title hr{
-    border: none;
-    width: 120px;
-    height: 5px;
-    background-color: #6c63ff;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.contact-inputs{
-    width: 400px;
-    height: 50px;
-    border: none;
-    outline: none;
-    padding-left: 25px;
-    font-weight: 500;
-    color: #666;
-    border-radius: 15px;
-    background-color: white;
-}
-
-.contact-left textarea{
-    height: 140px;
-    padding-top: 15px;
-    border-radius: 15px;
-}
-
-.contact-inputs:focus{
-    border:2px solid #8691F5
-}
-
-.contact-left button{
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    font-size: 16px;
-    color: white;
-    gap: 10px;
-    border: none;
-    border-radius: 50px;
-    background-color: #6c63ff;
-}
-
-.contact-right img{
-width: auto;
-height: 500px;
-}
-
-@media (max-width: 800px) {
-    .contact-inputs{
-        width: 80vw;
-    }
-    .contact-right{
-        display: none;
-    }
-}
-
-    </style>
 </head>
-<body>
-    <div class="contact-container">
+<div class="container">
+
+    <div class="box">
+
         <form action="https://api.web3forms.com/submit" method="POST" class= "contact-left">
-<div class="contact-left-title">
-    <h2>Contact Me</h2>
-    <hr>
-</div>
-<input type="hidden" name="access_key" value="b75cdc1e-1ef5-4a9d-bbd9-14acc4a4171a">
-    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-    <textarea name="message" placeholder="Your Message" class="contact-inputs" required ></textarea>
-    <button tupe="submit">Submit</button>
+
+            <div class="contact-left"></div>
+            <div class="contact-left-title">
+                <h2>Get in Touch</h2>
+                <hr>
+            </div>
+
+            <input type="hidden" name="access_key" value="b75cdc1e-1ef5-4a9d-bbd9-14acc4a4171a">
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required ></textarea>
+                <button tupe="submit">Submit</button>
         </form>
-        </form>
+
         <div class="contact-right">
-<img src="contact-Assets/Man Messaging.png" alt="">
+            <img src="Assets/Man Messaging.png" alt="">
         </div>
+
     </div>
+
+</div>
+
+<body>
+    
 </body>
 </html>
