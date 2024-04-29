@@ -97,6 +97,9 @@ h6 {
 #header.header-scrolled {
   height: 60px;
   background: rgba(25, 28, 31, 0.8);
+  border-radius: 15px;
+  margin: 20px;
+  margin-top: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -129,9 +132,8 @@ h6 {
   padding: 10px 15px;
   white-space: nowrap;
   transition: 0.3s;
-  font-size: 12px;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -601,9 +603,9 @@ section {
 
 .about p{
   font-size: 15pt;
-  text-align: center;
-  padding-left:  2vw;
-  padding-right: 2vw;
+  text-align: left;
+  padding-left:  5vw;
+  padding-right: 5vw;
 }
 
 button{
@@ -615,6 +617,10 @@ button{
     align-items: center;
     padding: 10px;
  }
+ 
+.about.row{
+  align-items: center;
+}
 
  .cbutton{
   text-align: center;
@@ -750,6 +756,7 @@ button{
 --------------------------------------------------------------*/
 .services .row{
   justify-content: space-evenly;
+  margin-top: 20px;
 }
 
 .services .icon-box {
@@ -758,10 +765,12 @@ button{
   overflow: hidden;
   background: #fff;
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
   text-align: center;
   border: 1px solid #fff;
   height: 325px;
+  border-radius: 15px;
+  transition: top ease ;
+  border: solid 1px;
 }
 
 .services .icon {
@@ -799,7 +808,8 @@ button{
 }
 
 .services .icon-box:hover {
-  border-color: #328DC8;
+  box-shadow: 5px 5px;
+  top: -10px;
 }
 
 .services .icon-box:hover .title a {
