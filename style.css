@@ -110,11 +110,13 @@ h6 {
 */
 .navbar {
   padding: 0;
+  display: flex; /* Add this line */
+  justify-content: space-between; /* Add this line */
+  align-items: center; /* Add this line */
 }
 
 .navbar ul {
   margin: 0;
-  padding: 0;
   display: flex;
   list-style: none;
   align-items: center;
@@ -240,6 +242,11 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  .about .image{
+    margin-bottom: 50px;
+  }
+
 }
 
 .navbar-mobile {
@@ -366,7 +373,7 @@ h6 {
   margin: 0 0 10px 0;
   font-family: "Space grotesk";
   font-size: 80px;
-  color: #fff;
+  color: #ffffff;
 }
 
 #hero h2 {
@@ -609,7 +616,7 @@ section {
 }
 
 button{
-  background-color: #328DC8;
+   background-color: #328DC8;
    border-radius: 50px;
     color: white;
     font-size: 13pt;
@@ -694,7 +701,7 @@ button{
   font-size: 14px;
   color: #5d6a75;
   margin-top: -25px;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .about .details .count-box a {
@@ -710,9 +717,10 @@ button{
 }
 
 .about .image {
-  background: url("./assets/imgs/Site/me.png") center center no-repeat;
-  background-size: fill;
-  min-height: 400px;
+  background: url("./assets/imgs/Illustration.png") center center no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  min-height: 300px;
 }
 
 .about .skills-content {
@@ -749,6 +757,12 @@ button{
   height: 15px;
   transition: 0.9s;
   background-color: #328DC8;
+}
+
+@media (max-width: 1366px) {
+  .about .details .count-box p {
+    margin-left: 20vw;
+  }
 }
 
 /*--------------------------------------------------------------
