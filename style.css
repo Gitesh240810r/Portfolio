@@ -12,6 +12,7 @@
 body {
   font-family: 'Space grotesk';
   color: black;
+  font-size: 16px;
   cursor: default;
 }
 
@@ -622,8 +623,17 @@ section {
   width: 100%;
   overflow: hidden;
   border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-details{
+  background-color: white;
+  border-radius: 15px;
   padding: 20px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+
 }
 
 .about .section-title{
@@ -657,7 +667,7 @@ button{
  }
 
 .about .details{
-  margin-top: 70px;
+  
 }
 
 .about .details ul {
@@ -670,7 +680,6 @@ button{
   margin-bottom: 20px;
   display: flex;
   font-size: 15pt;
-  padding-left: 10vw;
 }
 
 .about .details strong {
