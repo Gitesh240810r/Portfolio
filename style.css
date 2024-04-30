@@ -603,7 +603,9 @@ section {
 /*--------------------------------------------------------------
 # About Me
 --------------------------------------------------------------*/
-
+.about{
+  background-color: #f8f8f8;
+}
 .about .container {
   padding-left: 10vw;
   padding-right: 10vw;
@@ -616,11 +618,12 @@ section {
 }
 
 .about-content {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   width: 100%;
   overflow: hidden;
   border-radius: 15px;
   padding: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about .section-title{
@@ -750,6 +753,7 @@ button{
   display: block;
   background: none;
   border-radius: 0;
+  padding: 0px 100px;
 }
 
 .about .skills-content .progress .skill {
@@ -759,6 +763,7 @@ button{
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   color: #3b434a;
+  border-radius: 50px;
 }
 
 .about .skills-content .progress .skill .val {
@@ -768,6 +773,7 @@ button{
 
 .about .skills-content .progress-bar-wrap {
   background: #e6e8eb;
+  border-radius: 50px;
 }
 
 .about .skills-content .progress-bar {
@@ -775,12 +781,22 @@ button{
   height: 15px;
   transition: 0.9s;
   background-color: #328DC8;
+  border-radius: 50px;
 }
 
 @media (max-width: 1366px) {
   .about .details .count-box p {
     margin-left: 20vw;
   }
+
+  .about .skills-content .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+    padding: 0px;
+  }
+
 }
 
 /*--------------------------------------------------------------
