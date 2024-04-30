@@ -604,6 +604,10 @@ section {
   color: #3b434a;
 }
 
+.about-content{
+
+}
+
 .about .section-title{
   margin-bottom: 20px;
 }
@@ -720,7 +724,7 @@ button{
   background: url("./assets/imgs/Illustration.png") center center no-repeat;
   background-size: contain;
   border-radius: 50%;
-  min-height: 300px;
+  height: 300px;
 }
 
 .about .skills-content {
@@ -777,14 +781,12 @@ button{
   padding: 40px;
   position: relative;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  background: #f8f8f8;
   text-align: center;
   border: 1px solid #fff;
   height: 325px;
   border-radius: 15px;
   transition: top ease ;
-  border: solid 1px;
 }
 
 .services .icon {
