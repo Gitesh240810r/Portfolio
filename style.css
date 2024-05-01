@@ -244,6 +244,14 @@ h6 {
   transition: 0.5s;
 }
 
+@media (min-width: 991px) {
+
+  #header .nav-linkc{
+    display: none;
+  }
+
+}
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
