@@ -96,6 +96,7 @@ h6 {
 #header.header-transparent {
   background: transparent;
   color: white;
+
 }
 
 #header.header-scrolled {
@@ -253,12 +254,16 @@ h6 {
   }
 
   .cta {
-    visibility: hidden;
+    display: none;
   }
 
-  .contact-link{
-    color: black;
+  #header{
+    justify-content: center;
   }
+
+#header h3{
+  display: none;
+}
 
 }
 
@@ -272,12 +277,14 @@ h6 {
   background: rgba(36, 41, 46, 0.9);
   transition: 0.3s;
   z-index: 999;
+  
 }
 
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
   right: 15px;
+  
 }
 
 .navbar-mobile ul {
@@ -475,6 +482,8 @@ h6 {
   #hero {
     background-attachment: fixed;
   }
+
+  
 }
 
 @media (max-width: 575px) {
@@ -487,6 +496,11 @@ h6 {
     margin-bottom: 30px;
   }
 
+  #header h3{
+    display: none;
+  }
+  
+
 }
 
 @keyframes up-down {
@@ -497,6 +511,7 @@ h6 {
   100% {
     transform: translateY(-5px);
   }
+
 }
 
 /*--------------------------------------------------------------
