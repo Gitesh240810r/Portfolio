@@ -252,6 +252,14 @@ h6 {
     display: none;
   }
 
+  .cta {
+    visibility: hidden;
+  }
+
+  .contact-link{
+    color: black;
+  }
+
 }
 
 .navbar-mobile {
@@ -379,7 +387,14 @@ h6 {
 .hero-content{
   margin-right: auto;
   margin-left: 15vw;
+  
 }
+
+
+.hero-content p {
+  max-width: 60%; /* Adjust the percentage or pixel value as needed */
+}
+
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -464,13 +479,14 @@ h6 {
 
 @media (max-width: 575px) {
   #hero h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   #hero h2 {
 
     margin-bottom: 30px;
   }
+
 }
 
 @keyframes up-down {
@@ -539,7 +555,7 @@ section {
     font-size: 38px;
   }
 
-  
+ 
 }
 
 /*--------------------------------------------------------------
