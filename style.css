@@ -250,12 +250,16 @@ h6 {
     display: none;
   }
 
+
+  
 }
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
   }
+
+
 
   .navbar ul {
     display: none;
@@ -1020,6 +1024,26 @@ border: solid 5px #328DC8;
   font-size: 1.2rem;
 }
 
+/*--------------------------------------------------------------
+# Newsletter
+--------------------------------------------------------------*/
+
+#newsletter .container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 991px) {
+  .textbox {
+    width: 40%;
+  }
+}
+
+@media (max-width: 991px) {
+  #newsletter .container {
+    flex-direction: column;
+  }
+}
 
 /*--------------------------------------------------------------
 # Footer
