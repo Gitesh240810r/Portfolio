@@ -1024,54 +1024,6 @@ border: solid 5px #328DC8;
   font-size: 1.2rem;
 }
 
-  /*--------------------------------------------------------------
-  # Newsletter
-  --------------------------------------------------------------*/
-
-  #newsletter .container {
-    display: flex;
-    justify-content: center;
-    margin-right: 200px;
-  }
-
-  .newsletter{
-    background-color: #e6e8eb;
-  }
-
-  @media (min-width: 991px) {
-    .textbox {
-      width: 40%;
-    }
-  }
-
-  @media (max-width: 991px) {
-    #newsletter .container {
-      flex-direction: column;
-    }
-
-    #newsletter .container {
-      display: flex;
-      justify-content: center;
-      margin-right: 0;
-    }
-
-  }
-
-  @media (max-width: 991px) {
-    .card1O {
-      width: 100%;
-    }
-  }
-  
-
-  .card1O{
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    width: 150%;
-  }
 
 /*--------------------------------------------------------------
 # Footer
