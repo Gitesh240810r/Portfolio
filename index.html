@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitesh's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/27dfd8c49e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: "var(--bg-base)",
+              surface: "var(--bg-surface)",
+              elevated: "var(--bg-elevated)",
+              muted: "var(--bg-muted)",
+              primary: {
+                DEFAULT: "var(--accent-violet)",
+                blue: "var(--accent-blue)",
+                indigo: "var(--accent-indigo)",
+                violet: "var(--accent-violet)",
+                purple: "var(--accent-purple)",
+              },
+              ink: {
+                DEFAULT: "var(--text-primary)",
+                secondary: "var(--text-secondary)",
+                muted: "var(--text-muted)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full z-50 border-b border-[color:var(--border)] bg-[color:var(--bg-elevated)]/85 backdrop-blur-md">
+        <nav class="flex justify-between items-center px-4 py-2">
+            <h1 id="name" class="text-2xl font-bold text-ink">Gitesh</h1>
+            <ul class="flex justify-betwee items-center gap-4 text-ink-secondary">
+                <li><a href="#hero" class="hover:text-ink transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-ink transition-colors">About</a></li>
+                <li><a href="#services" class="hover:text-ink transition-colors">Services</a></li>
+                <li><a href="#projects" class="hover:text-ink transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-ink transition-colors">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="min-h-screen flex p-5 flex-col items-center justify-center">
+        <div class="container mx-auto px-4 text-center ">
+            <h1 class="text-4xl font-bold text-ink">Hello, I'm Gitesh, a <br><span id="typed"></span></h1>
+        </div>
+
+        <div class="flex gap-2 justify-center mt-6 ">
+            <i id="icon" class="fa-brands fa-discord text-2xl rounded-full bg-blue-900 p-3 h-[50px] w-[50px] flex justify-center items-center"></i>
+            <i id="icon" class="fa-brands fa-github text-2xl rounded-full bg-blue-900 p-3 h-[50px] w-[50px] flex justify-center items-center"></i>
+            <i id="icon" class="fa-solid fa-envelope text-2xl rounded-full bg-blue-900 p-3 h-[50px] w-[50px] flex justify-center items-center"></i>
+         </div>
+         
+        <button class="mt-8 px-4 py-2 rounded bg-white text-[#181A2F] font-medium transition duration-200 hover:bg-indigo-700 hover:text-white hover:scale-105">
+          View my Work!
+        </button>
+    </section>
+
+    <section id="about" class="p-5">
+        <div class="flex flex-col items-center p-5 ">
+            <h1 class="text-3xl font-bold">About me</h1>
+            <div class="w-[100px] h-[5px] bg-white mt-1"></div>
+         </div>
+
+         <div class="p-5 bg-slate-900 grid grid-cols-1 md:grid-cols-3 m-auto max-w-[1000px] ">
+            <div class="col-span-1 flex justify-center items-center">
+                <img src="assets/Illustration.png" class="rounded-full max-h-[250px] ">
+            </div>
+            <div class="col-span-2">
+                <p class="text-[17px] leading-relaxed p-5">I am a student passionate about technology and engineering. I love exploring how things work, experimenting with new ideas, and building projects that solve real problems. Lately, I’ve been especially interested in web development and learning how to create useful, functional websites and tools that people can actually benefit from. I enjoy constantly improving my skills, staying curious, and learning something new every day. In the future, I hope to pursue a career in engineering, where I can continue building meaningful solutions and contributing to the world through technology.</p></p>
+            </div>
+         </div>
+
+         <div id="bento" class="p-5 grid grid-cols-5 gap-2 max-w-[1000px] m-auto">
+
+            <div class="col-span-3 bg-slate-800 rounded-xl p-6 flex flex-col h-full min-h-[290px]">
+                <h1 class="text-xl font-bold mb-2">Technical Proficiency</h1>
+                <div id="progresslist" class="flex flex-col gap-3 p-2 flex-1"></div>
+            </div>
+
+            <div class="col-span-2 bg-slate-800 rounded-xl p-6 flex flex-col h-full min-h-[290px]">
+                <h1 class="text-xl font-bold mb-2">Currently Learning</h1>
+                <ul class="list-['>_'] list-inside flex-1">
+                    <li>Modern Vanilla JS</li>
+                    <li>React</li>
+                    <li>DevOps</li>
+                    <li>AI & Computing</li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 bg-slate-800 rounded-xl p-6 flex flex-col h-full min-h-[200px]">
+                <h1 class="text-xl font-bold mb-2">Interests & Passions</h1>
+                <div class="overflow-hidden group h-[100px]">
+                    <ul id="interestslist" class="flex flex-col gap-2 [animation:scroll-up_15s_linear_infinite] group-hover:[animation-play-state:paused]"></ul>
+                </div>
+            </div>
+
+            <div class="col-span-3 bg-slate-800 rounded-xl p-6 flex flex-col h-full min-h-[200px] relative overflow-hidden">
+                <img src="assets/Image.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none z-0">
+                <div class="relative z-10 flex flex-col h-full">
+                    <h1 class="text-xl font-bold mb-2">Currently Working On</h1>
+                    <ol class="flex-1 font-semibold list-decimal list-inside">
+                        <li>Expense Tracker</li>
+                        <li>Personal Blog</li>
+                        <li>3D model with Blender</li>
+                    </ol>
+                </div>
+            </div>
+
+         </div>
+
+    </section>
+
+    <section id="services" class="max-w-[1250px] m-auto">
+        <div class="flex flex-col items-center p-5 ">
+            <h1 class="text-3xl font-bold">Services</h1>
+            <div class="w-[100px] h-[5px] bg-white mt-1"></div>
+         </div>
+        <div id="serviceOutput" class="grid grid-cols-1 md:grid-cols-2  p-5 gap-5 "></div>
+    </section>
+
+    <section id="projects">
+        <div class="flex flex-col items-center p-5 ">
+            <h1 class="text-3xl font-bold">Projects</h1>
+            <div class="w-[100px] h-[5px] bg-white mt-1"></div>
+         </div>
+        <div id="projContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 max-w-[1250px] m-auto"></div>
+    </section>
+
+    <section id="contact" class="py-10">
+        <div class="max-w-[1250px] m-auto px-5">
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-3xl font-bold">Contact Me</h1>
+                <div class="w-[100px] h-[5px] bg-white mt-1"></div>
+                <p class="mt-4 max-w-[70ch] text-ink-secondary">
+                    Want to collaborate, hire me, or just say hi? Send a message and I’ll get back to you.
+                </p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+                <div class="flex flex-col gap-4 col-span-1 m-auto w-full ">
+                    <a href="https://discord.com/" target="_blank" rel="noreferrer" class="group bg-[#1c1c1c] p-5 flex gap-4 items-center rounded-xl border border-[color:var(--border)] hover:border-blue-500 transition duration-300">
+                        <div class="h-[52px] w-[52px] rounded-full bg-blue-900 flex items-center justify-center">
+                            <i class="fa-brands fa-discord text-2xl"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="text-xl font-semibold">Discord</h3>
+                            <p class="text-ink-secondary truncate">gitesh24</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+                    </a>
+
+                    <a href="mailto:giteshr24@gmail.com" class="group bg-[#1c1c1c] p-5 flex gap-4 items-center rounded-xl border border-[color:var(--border)] hover:border-blue-500 transition duration-300">
+                        <div class="h-[52px] w-[52px] rounded-full bg-blue-800 flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-2xl"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="text-xl font-semibold">Email</h3>
+                            <p class="text-ink-secondary truncate">giteshr24@gmail.com</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+                    </a>
+
+                    <div class="bg-[#1c1c1c] p-5 rounded-xl border border-[color:var(--border)]">
+                        <p class="mt-2 text-ink-secondary leading-relaxed">
+                            Feel free to reach out with any questions or just to say hello. I look forward to hearing from you!
+                        </p>
+                    </div>
+                </div>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="bg-[#1c1c1c] p-6 rounded-xl border border-[color:var(--border)] col-span-2">
+                    <input type="hidden" name="access_key" value="b75cdc1e-1ef5-4a9d-bbd9-14acc4a4171a">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm text-ink-secondary" for="contact-name">Name</label>
+                            <input id="contact-name" type="text" class="border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition py-2.5 px-4 rounded-lg bg-transparent text-white placeholder-gray-400 outline-none" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm text-ink-secondary" for="contact-email">Email</label>
+                            <input id="contact-email" type="email" class="border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition py-2.5 px-4 rounded-lg bg-transparent text-white placeholder-gray-400 outline-none" name="email" placeholder="you@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-col gap-2">
+                        <label class="text-sm text-ink-secondary" for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" class="border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition py-2.5 px-4 min-h-[180px] rounded-lg bg-transparent text-white placeholder-gray-400 outline-none resize-y" placeholder="Enter your Message" required></textarea>
+                    </div>
+
+                    <div class="mt-5 flex justify-center items-center gap-3">
+                        <button class="px-5 py-2.5 font-semibold bg-blue-600 text-white rounded-lg transition transform duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/20 focus:outline-none focus:ring-2 focus:ring-blue-500/30" type="submit">
+                            Send message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center text-ink-secondary text-sm">
+        <p>Thanks for visiting, Feel free to reach out!</p>
+        &copy; 2026 Gitesh All rights reserved.
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>

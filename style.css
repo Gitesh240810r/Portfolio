@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+  Site palette — dark blue → purple theme
+  ----------------------------------------
+  Backgrounds:  --bg-base (deepest) → --bg-elevated (cards / chrome)
+  Accents:      --accent-blue → --accent-indigo → --accent-violet → --accent-purple
+  Text:         --text-primary (headings) → --text-muted (supporting)
+  UI:           --border, --ring (focus / outlines)
+*/
+
+:root {
+  --bg-base: #070a14;
+  --bg-surface: #0c1224;
+  --bg-elevated: #121a33;
+  --bg-muted: #1a2544;
+
+  --accent-blue: #3b82f6;
+  --accent-indigo: #6366f1;
+  --accent-violet: #8b5cf6;
+  --accent-purple: #a855f7;
+  --accent-fuchsia: #c026d3;
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --border: rgba(148, 163, 184, 0.12);
+  --border-strong: rgba(139, 92, 246, 0.35);
+  --ring: rgba(129, 140, 248, 0.45);
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #0a1628 0%,
+    #121a33 35%,
+    #1e1b4b 70%,
+    #2e1065 100%
+  );
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--accent-blue),
+    var(--accent-indigo),
+    var(--accent-violet),
+    var(--accent-purple)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  color: var(--text-primary);
+  background: var(--gradient-hero);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#typed {
+  color: var(--accent-blue);
+}
+
+nav li,
+#name {
+  position: relative;
+  display: inline-block;
+}
+
+nav li::after,
+#name::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -4px;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav li:hover::after,
+#name:hover::after {
+  transform: scaleX(1);
+}
+
+#icon {
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#icon:hover {
+  transform: translateY(-10px); /* floats up 10px */
+}
+
+@keyframes scroll-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
