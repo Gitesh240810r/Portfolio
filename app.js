@@ -1,4 +1,12 @@
 //Typed.JS 
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (!loader) return;
+
+  loader.classList.add("is-hidden");
+  setTimeout(() => loader.remove(), 2500);
+});
+
 const typed = new Typed('#typed', {
     strings : ["Student", "Developer", "Designer"],
     typeSpeed: 100,
