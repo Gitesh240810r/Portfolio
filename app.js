@@ -108,9 +108,11 @@ const projects = [
       { name: "HTML5", icon: "fa-brands fa-html5 text-orange-600" },
       { name: "CSS3", icon: "fa-brands fa-css3-alt text-blue-500" },
       { name: "JavaScript", icon: "fa-brands fa-js-square text-yellow-400" },
-      { name: "Chart.js", icon: "fa-solid fa-chart-pie text-pink-400" }
-    ],
-    image: "assets/expense-tracker.png"
+      { name: "Chart.js", icon: "fa-solid fa-chart-pie text-pink-400" },
+      { name: "FireBase", icon: "fa-solid fa-fire-flame-curved text-red-400" }
+    ],  
+    link: "https://gitesh240810r.github.io/Xpenses/",
+    image: "assets/projects/Xpenses.png"
   },
   {
     name: "Personal Blog",
@@ -137,7 +139,7 @@ const projects = [
 const projContainer = document.getElementById("projContainer");
 for (let project of projects){
     const card = document.createElement("div");
-    card.classList = " bg-slate-800 p-3 rounded-xl max-w-[500px] m-auto "
+    card.classList = " bg-slate-800 p-3 rounded-xl max-w-[500px] h-full m-auto "
     let toolsHtml = "";
 
     for (let tool of project.tools) {
@@ -150,7 +152,9 @@ for (let project of projects){
     }
 
     card.innerHTML = `
-            <img src="${project.image}" alt="${project.name}" class="object-cover w-full h-48 bg-slate-700"/>
+            <a href="${project.link}" target="_blank" rel="noreferrer">
+            <img src="${project.image}" alt="${project.name}" class="object-cover w-full h-56 bg-slate-700"/>
+            </a>
             <div class="p-5 flex flex-col flex-1">
                 <h3 class="text-xl font-bold mb-2 text-ink">${project.name}</h3>
                 <p class="text-ink-muted mb-3 flex-1">${project.description}</p>
@@ -158,6 +162,7 @@ for (let project of projects){
             ${toolsHtml}
             </div>
             </div>
+            </a>
         `
     projContainer.appendChild(card);
 
