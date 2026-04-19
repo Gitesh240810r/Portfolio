@@ -64,21 +64,25 @@ const services = [
   {
     name: "Web Development",
     icon: "fa-solid fa-code",
+    accent: "text-blue-300",
     text: "Building responsive and modern websites using HTML, CSS, and JavaScript. I enjoy bringing digital ideas to life and ensuring great user experiences."
   },
   {
     name: "UI/UX Design",
     icon: "fa-solid fa-palette",
+    accent: "text-violet-300",
     text: "Crafting visually appealing layouts and seamless user flows. I pay careful attention to both aesthetics and usability in my designs."
   },
   {
     name: "Vector Illustrations",
     icon: "fa-solid fa-pen-nib",
+    accent: "text-cyan-300",
     text: "Designing high-quality vector graphics and illustrations for web and print, combining creativity with technical skill."
   },
   {
     name: "Graphic Design",
     icon: "fa-solid fa-paintbrush",
+    accent: "text-fuchsia-300",
     text: "Producing visually engaging graphics for branding, social media, and digital projects. I focus on clear communication through design."
   }
 ];
@@ -88,12 +92,22 @@ const serviceOutput = document.getElementById("serviceOutput");
 for (let service of services){
   // Create a container div for each service with icon, title, and text
   const card = document.createElement('div');
-  card.classList = "bg-slate-800 p-5 flex flex-col items-center min-w-[300px] h-full  m-auto "
+  card.className = "rounded-2xl border border-white/10 bg-slate-800/85 p-6 min-w-[300px] h-full m-auto";
 
   card.innerHTML = `
-    <i class="${service.icon} text-4xl mb-4 text-indigo-400"></i>
-    <h2 class="text-xl font-bold mb-2 text-ink">${service.name}</h2>
-    <p class="text-ink-muted text-base text-center">${service.text}</p>
+    <div class="flex h-full flex-col">
+      <div class="flex items-center">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900/70 border border-white/10">
+          <i class="${service.icon} text-lg ${service.accent}"></i>
+        </div>
+      </div>
+      <div class="mt-6 flex-1">
+        <div class="mb-3">
+          <h2 class="text-xl font-semibold tracking-tight text-ink">${service.name}</h2>
+        </div>
+        <p class="text-sm leading-7 text-ink-secondary">${service.text}</p>
+      </div>
+    </div>
   `;
 
   // Append card to output
@@ -102,38 +116,43 @@ for (let service of services){
 
 const projects = [
   {
-    name: "Expense Tracker",
-    description: "A web application that lets users track their daily expenses, set budgets, and analyze spending patterns with visualizations.",
+    name: "Xpenses",
+    description: "A personal expense tracker built to log spending, organize categories, and make day-to-day money habits easier to understand.",
     tools: [
       { name: "HTML5", icon: "fa-brands fa-html5 text-orange-600" },
       { name: "CSS3", icon: "fa-brands fa-css3-alt text-blue-500" },
       { name: "JavaScript", icon: "fa-brands fa-js-square text-yellow-400" },
-      { name: "Chart.js", icon: "fa-solid fa-chart-pie text-pink-400" },
-      { name: "FireBase", icon: "fa-solid fa-fire-flame-curved text-red-400" }
+      { name: "Local Storage", icon: "fa-solid fa-hard-drive text-slate-300" },
+      { name: "Charts", icon: "fa-solid fa-chart-pie text-pink-400" },
+      { name: "Firebase", icon: "devicon-firebase-plain colored" }
+  
     ],  
     link: "https://gitesh240810r.github.io/Xpenses/",
     image: "assets/projects/Xpenses.png"
   },
   {
-    name: "Personal Blog",
-    description: "A responsive, modern blog platform with support for markdown, dark mode, and easy content editing for developers.",
+    name: "CookStation",
+    description: "A recipe-focused web project with a clean interface for browsing meals, exploring cooking ideas, and presenting food content in a more engaging way.",
     tools: [
       { name: "HTML5", icon: "fa-brands fa-html5 text-orange-600" },
       { name: "CSS3", icon: "fa-brands fa-css3-alt text-blue-500" },
       { name: "JavaScript", icon: "fa-brands fa-js-square text-yellow-400" },
-      { name: "Netlify", icon: "fa-solid fa-cloud-arrow-up text-green-400" }
-    ],
-    image: "assets/personal-blog.png"
+      { name: "Firebase", icon: "devicon-firebase-plain colored" }
+      
+    ],  
+    link: "https://gitesh240810r.github.io/CookStation/",
+    image: "assets/projects/Cookstation.png"
   },
   {
-    name: "3D Blender Model",
-    description: "A portfolio piece featuring a complex 3D model built and rendered using Blender, showcasing modeling and texturing skills.",
+    name: "Vector Illustrations",
+    description: "A collection of vector-based artwork focused on clean shapes, bold composition, and illustration work suited for digital use and visual storytelling.",
     tools: [
-      { name: "Blender", icon: "fa-brands fa-blender text-orange-500" },
-      { name: "Photoshop", icon: "fa-solid fa-paintbrush text-blue-300" }
-    ],
-    image: "assets/3d-model.png"
-  }
+      { name: "Inkscape", icon: "devicon-inkscape-plain " },
+    ],  
+    link: "illustrations.html",
+    image: "https://icons8.com/blog/wp-content/uploads/2023/10/lunacy_screenshot-1024x583.webp"
+  },
+  
 ];
 
 const projContainer = document.getElementById("projContainer");
